@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loy</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+          <h2>Bookings</h2>
+
+       <%  for(let i = 0; i < booking.length; i++) { %> 
+          <div class="comment">
+              <div class="comment-header">
+                  <span class="username"><%= booking[i].username %></span>
+              </div>
+              <div class="rating">client: <%=booking[i].teacher %></div>
+              <div class="rating">phone: <%= booking[i].rating %> / 10 </div>
+              <p class="comment-text">email:<%= booking[i].comment %></p>
+              <p class="comment-text">service_id:<%= booking[i].comment %></p>
+          </div>
+    <% } %>
+        <center>
+              <button>Accept</button>
+              <button>Decline</button>
+            </center>
+          </div>
+        <% } %>
+
+          <a href="/addItem">Add new items</a>
+        </body>
+        </html>
+

@@ -1,0 +1,124 @@
+/* <style type="text/css" media="all" nonce="b4ea40f6fca36988ff7d3ea49ffb70db030eafc173748c3eb6e129b4a3ddbeee52af7a69810fd60433ecdefc3196d7966d63f92c8f27eac4262aa08fcb2448b6">
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600'); body { font-family: 'Source Serif Pro',Helvetica,sans-serif; }	.content {  background-color: #000000; background-image: none; }
+.table tr { background-color: #000000; }
+.steps { background-color: transparent; }
+.steps li:not(:last-child):after { border-left-color: #000000; }
+.steps li.active { background-color: #1E1E1E; }
+.steps li.active:not(:last-child):after { border-left-color: #1E1E1E; }	.content, .calendarHeading a { color: #d4ab17; }
+.select .select-label, .select .duration-container { color: #CAA10D; }
+a.branded:hover, a.branded:focus, a.btn-link:hover, a.btn-link:focus { color: #d4ab17; }
+a.branded { color: #CAA10D; }
+#step-forms .control-label, #appointment-form .custom-form .control-label, #step-forms .is-focused label, #appointment-form .custom-form .is-focused label { color: #d4ab17; }
+.certificate-input .control-label, .appointment-time .text-muted, .steps li a, .steps li.active a { color: #d4ab17; }
+.catalog-item .description, .addon-price, .addon-duration { color: #d4ab17; }
+.type-description.text-muted { color: #d4ab17; opacity: 0.85; margin-bottom: 10px; }
+.select-item .text-muted { color: #d4ab17 !important; }body { background: #000000; background-image: none; }
+a, a:hover, a:focus, a.btn-link { color: #000000; }
+.btn-inverse { border-color: #000000; }
+.btn-inverse:active, .btn-inverse:hover { background-color: #000000; }
+.choose-time-container label:hover, .choose-time-container label.checked, .btn-info,
+.btn-primary.disabled, .btn-primary[disabled], .btn-primary, .btn-primary:focus, .btn.btn-primary.btn-block.btn-next-step, .btn.btn-primary.submit-forms-payment,
+.btn.btn-primary:hover, .btn.btn-primary:active { background: #000000; background-image: none; }
+.calendar .scheduleday.activeday:hover, .choose-time-container label.checked, .choose-time-container label:hover, .choose-date .calendar .activeday:hover, .choose-date .calendar .selectedday { background: #000000; background-image: none; }
+.choose-date-time .choose-date-times .choose-time input[type="radio"]+label:hover, .reschedule-choose-date-time .choose-time input[type="radio"]+label:hover,
+.choose-date-time .date .choose-time-actions, .date .choose-time input[type="radio"]:checked+label,
+  .reschedule-choose-date-time .date .choose-time input[type="radio"]:checked+label, .reschedule-choose-date-time .date .choose-time-actions,
+  .choose-date-time .date-head-text, .reschedule-choose-date-time .date-head-text
+   { border-color: #000000; color: #000000; }
+.steps li.active { border-bottom-color: #000000; }
+.form-control:focus, .sq-input--focus { border-color: #000000; box-shadow: none; }
+.step-number { background-color: #000000; }		</style> */
+
+
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+Add media queries for smaller screens 
+ @media screen and (max-width:720px) { 
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+
+
+
+#change {
+  width: 100vw !important;
+  height: 500px;
+}
+
+.active {
+  background-color: #04AA6D;
+}
